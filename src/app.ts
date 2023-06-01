@@ -8,7 +8,7 @@ app.use(cors())
 app.use(express())
 app.use(express.urlencoded({ extended: true }))
 
-app.get('/', (req: Application, res: Response) => {
+app.get('/', (req: Request, res: Response) => {
   res.send('welcome to university management project')
 })
 
