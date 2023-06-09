@@ -1,4 +1,4 @@
-import { ErrorRequestHandler, NextFunction, Request, Response } from 'express'
+import { ErrorRequestHandler } from 'express'
 import { IGenericErrorMessage } from '../../interface/error'
 import handleValidationError from '../../Error/handleValidationError'
 import config from '../../config'
@@ -6,12 +6,7 @@ import ApiError from '../../Error/ApiError'
 import { errorLogger } from '../../shared/logger'
 // import { error } from 'winston'
 
-const globalErrorHandler: ErrorRequestHandler = (
-  error,
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
   config.env === 'development'
     ? console.log('globalErrorHandler', error)
     : errorLogger.error('globalErrorHandler', error)

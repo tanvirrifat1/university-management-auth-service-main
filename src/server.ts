@@ -4,8 +4,15 @@ import config from './config'
 import { logger, errorLogger } from './shared/logger'
 import { Server } from 'http'
 
+// uncaught error
+process.on('uncaughtException', err => {
+  errorLogger.error(err)
+  process.exit(1)
+})
+
+let server: Server
+
 async function main() {
-  let server: Server
   try {
     await mongoose.connect(config.database_url as string)
     logger.info('Database connect successfully')
@@ -18,7 +25,6 @@ async function main() {
   }
 
   process.on('unhandledRejection', error => {
-    console.log('unhandledRejection is deleted, we are closing our server')
     if (server) {
       server.close(() => {
         errorLogger.error(error)
@@ -29,4 +35,12 @@ async function main() {
     }
   })
 }
+
 main()
+
+process.on('SIGTERM', () => {
+  logger.info('SIGTERM is received')
+  if (server) {
+    server.close()
+  }
+})
