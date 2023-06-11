@@ -94,3 +94,15 @@
   label: 'PH',
   timestamp: '2023-06-11T04:48:49.957Z'
 }
+{
+  message: 'Database connect successfully',
+  level: 'info',
+  label: 'PH',
+  timestamp: '2023-06-11T04:51:19.953Z'
+}
+{
+  message: 'Application app listening on port 5000',
+  level: 'info',
+  label: 'PH',
+  timestamp: '2023-06-11T04:51:19.977Z'
+}
