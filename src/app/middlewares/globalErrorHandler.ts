@@ -5,7 +5,7 @@ import config from '../../config';
 import ApiError from '../../Error/ApiError';
 import { errorLogger } from '../../shared/logger';
 import { ZodError } from 'zod';
-import handleZodError from '../../Error/handleZodError';
+import handleZodError from './handleZodError';
 // import { error } from 'winston'
 
 const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {

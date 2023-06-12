@@ -1,0 +1,6 @@
+{
+  message: 'Failed to connect database',
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-06-11T15:32:36.738Z'
+}
