@@ -119,6 +119,11 @@
             "date": 1686643417933,
             "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-13-06-14-success.log",
             "hash": "4727e905790104b76e039238f17179261f706c9347491ea878c81699f1875bae"
+        },
+        {
+            "date": 1686671245868,
+            "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-13-06-21-success.log",
+            "hash": "f2984d6770021e13617a33bb58dce407bfd80514bb996c619a8bc5869b990314"
         }
     ],
     "hashType": "sha256"
