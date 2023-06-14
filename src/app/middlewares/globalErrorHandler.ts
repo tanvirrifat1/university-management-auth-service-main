@@ -1,4 +1,4 @@
-import { ErrorRequestHandler } from 'express';
+import { ErrorRequestHandler, Response, Request } from 'express';
 import { IGenericErrorMessage } from '../../interface/error';
 import handleValidationError from '../../Error/handleValidationError';
 import config from '../../config';
@@ -9,7 +9,11 @@ import handleZodError from '../../Error/handleZodError';
 import handleCastError from '../../Error/handleCastError';
 // import { error } from 'winston'
 
-const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
+const globalErrorHandler: ErrorRequestHandler = (
+  error,
+  req: Request,
+  res: Response
+) => {
   config.env === 'development'
     ? console.log('globalErrorHandler', error)
     : errorLogger.error('globalErrorHandler', error);
@@ -62,8 +66,6 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
     errorMessages,
     stack: config.env !== 'production' ? error?.stack : undefined,
   });
-
-  next();
 };
 
 export default globalErrorHandler;
