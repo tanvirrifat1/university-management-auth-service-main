@@ -18,7 +18,6 @@ const createSemester = async (
   payload: IAcademicSemester
 ): Promise<IAcademicSemester> => {
   if (academicSemesterTitleCodeMapper[payload.title] !== payload.code) {
-    console.log(httpStatus.BAD_REQUEST, 'Invalid Semester Code');
     throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid Semester Code');
   }
 
@@ -62,8 +61,11 @@ const getAllSemesters = async (
     sortConditions[sortBy] = sortOrder;
   }
 
+  const whereConditions =
+    andConditions.length > 0 ? { $and: andConditions } : {};
+
   const result = await academicSemester
-    .find({ $and: andConditions })
+    .find(whereConditions)
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
@@ -80,7 +82,34 @@ const getAllSemesters = async (
   };
 };
 
+const getSingleSemester = async (
+  id: string
+): Promise<IAcademicSemester | null> => {
+  const result = await academicSemester.findById(id);
+  return result;
+};
+
+const UpdateSemester = async (
+  id: string,
+  payload: Partial<IAcademicSemester>
+) => {
+  if (
+    payload.title &&
+    payload.code &&
+    academicSemesterTitleCodeMapper[payload.title] !== payload.code
+  ) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid Semester Code');
+  }
+
+  const result = await academicSemester.findOneAndUpdate({ _id: id }, payload, {
+    new: true,
+  });
+  return result;
+};
+
 export const AcademicSemesterService = {
   createSemester,
   getAllSemesters,
+  getSingleSemester,
+  UpdateSemester,
 };
