@@ -1,7 +1,7 @@
 import express from 'express';
 import validateRequest from '../../middlewares/validateRequest';
 import { AcademicSemesterValidation } from './academicSemester.Validition';
-import { AcademicSemesterController } from './acadamicSemester.controller';
+import { AcademicSemesterController } from './academicSemester.controller';
 
 const router = express.Router();
 
@@ -12,6 +12,8 @@ router.post(
 );
 
 router.get('/:id', AcademicSemesterController.getSingleSemester);
+
+router.patch('/:id', AcademicSemesterController.updateSemester);
 
 router.get('/', AcademicSemesterController.getAllSemesters);
 
