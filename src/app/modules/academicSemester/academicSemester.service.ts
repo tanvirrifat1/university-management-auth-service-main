@@ -18,7 +18,6 @@ const createSemester = async (
   payload: IAcademicSemester
 ): Promise<IAcademicSemester> => {
   if (academicSemesterTitleCodeMapper[payload.title] !== payload.code) {
-    console.log(httpStatus.BAD_REQUEST, 'Invalid Semester Code');
     throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid Semester Code');
   }
 
@@ -94,6 +93,14 @@ const UpdateSemester = async (
   id: string,
   payload: Partial<IAcademicSemester>
 ) => {
+  if (
+    payload.title &&
+    payload.code &&
+    academicSemesterTitleCodeMapper[payload.title] !== payload.code
+  ) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid Semester Code');
+  }
+
   const result = await academicSemester.findOneAndUpdate({ _id: id }, payload, {
     new: true,
   });
