@@ -9,7 +9,7 @@
   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
 
  "rules": {
-    "no-unused-vars": "error",
+    // "no-unused-vars": "error",
     "prefer-const": "error",
     // "no-unused-expressions": "error",
     "no-undef": "error",

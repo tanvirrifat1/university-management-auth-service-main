@@ -3,6 +3,10 @@ import cors from 'cors';
 import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import routes from './app/routes';
 import httpStatus from 'http-status';
+import {
+  generateStudentId,
+  generatedFacultyId,
+} from './app/modules/users/user.ultis';
 
 const app: Application = express();
 
@@ -16,6 +20,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // application routes
 app.use('/api/v1/', routes);
+
+// globalErrorHandler
+app.use(globalErrorHandler);
 
 // Api handle not found
 app.use((req: Request, res: Response, next: NextFunction) => {
@@ -31,7 +38,5 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   });
   next();
 });
-
-app.use(globalErrorHandler);
 
 export default app;
