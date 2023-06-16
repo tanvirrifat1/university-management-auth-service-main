@@ -174,6 +174,41 @@
             "date": 1686816921800,
             "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\errors\\phu-2023-15-06-14-error.log",
             "hash": "682b6654bd81e9418f07ff48b82e86bbae7d762457f840fb952ff72971fdfbf6"
+        },
+        {
+            "date": 1686821823358,
+            "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\errors\\phu-2023-15-06-15-error.log",
+            "hash": "8f0b8fdd691ecf229bfc6e3a660cdd86f359e94c631c09f9bd8239dfabd3fa66"
+        },
+        {
+            "date": 1686838175911,
+            "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\errors\\phu-2023-15-06-20-error.log",
+            "hash": "4f4c69ac3dccea862636c09e3156714d860abd9cdc2c65af0aefeaea56ed6d84"
+        },
+        {
+            "date": 1686842506896,
+            "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\errors\\phu-2023-15-06-21-error.log",
+            "hash": "223e831b24d76aa82d8d3007d5cbfb6990abbb96745581d009fcb5d562bc8c1e"
+        },
+        {
+            "date": 1686845239446,
+            "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\errors\\phu-2023-15-06-22-error.log",
+            "hash": "fabe48be2b25b53c2c82113229d74624b17720545b1bf41ad6b4fabb815372e9"
+        },
+        {
+            "date": 1686848465248,
+            "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\errors\\phu-2023-15-06-23-error.log",
+            "hash": "9b707ab65f99cd3e3e5da8a3296d5153eade378c46e10ab87cd16898ab7415dd"
+        },
+        {
+            "date": 1686929762163,
+            "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\errors\\phu-2023-16-06-21-error.log",
+            "hash": "2bb5672fa9af1e90228164f131daf5644580637d3654f70cebcd1719639d7ae0"
+        },
+        {
+            "date": 1686931401749,
+            "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\errors\\phu-2023-16-06-22-error.log",
+            "hash": "86df74e32f1617a4e27807453c29399aafe68d7d72c19070f1ab0b41a2f769cb"
         }
     ],
     "hashType": "sha256"

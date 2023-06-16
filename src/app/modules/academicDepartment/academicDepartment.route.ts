@@ -13,4 +13,18 @@ router.post(
   academicDepartmentController.createDepartment
 );
 
+router.get('/:id', academicDepartmentController.getSingleDepartment);
+
+router.patch(
+  '/:id',
+  validateRequest(
+    AcademicDepartmentValidation.updateAcademicDepartmentZodSchema
+  ),
+  academicDepartmentController.updatedDepartment
+);
+
+router.delete('/:id', academicDepartmentController.deleteDepartment);
+
+router.get('/', academicDepartmentController.getAllDepartments);
+
 export const AcademicDepartmentRoutes = router;
