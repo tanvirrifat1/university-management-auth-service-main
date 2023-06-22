@@ -6,16 +6,6 @@
     "auditLog": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\successes\\.df4c38b981a6dec6bc65eb04b909e822ce4b893e-audit.json",
     "files": [
         {
-            "date": 1685980323706,
-            "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-05-06-21-success.log",
-            "hash": "53ab8e6b22f00a53563090e0ad82558d5f5b69f1e12da22bf4dc4bd624d5a0de"
-        },
-        {
-            "date": 1685981445129,
-            "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-05-06-22-success.log",
-            "hash": "a2ae941e1c0bab8acb7d1a8b1a1cffce6d52608ced6e4af9dc0bf9cd6f077f67"
-        },
-        {
             "date": 1686322570258,
             "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-09-06-20-success.log",
             "hash": "09cd2b3ebd66b5e2ad9777df8259c662bb302990ba64f5624b7a6ceeb016ae09"
@@ -229,6 +219,21 @@
             "date": 1686937077379,
             "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-16-06-23-success.log",
             "hash": "a26471b0e591fc7ec46493bf55931cd8c8291b182061d0e8d5613703909c6644"
+        },
+        {
+            "date": 1687281782761,
+            "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-20-06-23-success.log",
+            "hash": "f0870d95994f472548ba32e064141ea9a4f9488844bf85fbeb18c7333b54657e"
+        },
+        {
+            "date": 1687446806126,
+            "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-22-06-21-success.log",
+            "hash": "c46070047af73e6a0d1bae87876e150b4a0a4296f1353ce6d8da9f0f1b0605fe"
+        },
+        {
+            "date": 1687449684646,
+            "name": "C:\\projects\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-22-06-22-success.log",
+            "hash": "64092ead3923dc577d5c7ee534abd880cb36409505b3d7b7bc0f38046473a4c1"
         }
     ],
     "hashType": "sha256"
