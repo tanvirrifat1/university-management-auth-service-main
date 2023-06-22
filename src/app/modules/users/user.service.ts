@@ -8,7 +8,6 @@ import { User } from './user.model';
 import { generateStudentId, generatedFacultyId } from './user.ultis';
 import { Student } from '../student/student.model';
 import httpStatus from 'http-status';
-import { IAcademicSemester } from '../academicSemester/academicSemester.interface';
 import { IFaculty } from '../faculty/faculty.interface';
 import { Faculty } from '../faculty/faculty.model';
 
@@ -31,7 +30,7 @@ const createStudent = async (
   const session = await mongoose.startSession();
   try {
     session.startTransaction();
-    const id = await generateStudentId(AcademicSemester as IAcademicSemester);
+    const id = await generateStudentId(AcademicSemester);
 
     user.id = id;
     student.id = id;
@@ -78,7 +77,10 @@ const createStudent = async (
   return newUserAllData;
 };
 
-const createFaculty = async (faculty: IFaculty, user: IUser) => {
+const createFaculty = async (
+  faculty: IFaculty,
+  user: IUser
+): Promise<IUser | null> => {
   // default password
   if (!user.password) {
     user.password = config.default_faculty_pass as string;
@@ -90,7 +92,6 @@ const createFaculty = async (faculty: IFaculty, user: IUser) => {
   // generate faculty id
   let newUserAllData = null;
   const session = await mongoose.startSession();
-
   try {
     session.startTransaction();
 
@@ -101,7 +102,7 @@ const createFaculty = async (faculty: IFaculty, user: IUser) => {
     const newFaculty = await Faculty.create([faculty], { session });
 
     if (!newFaculty.length) {
-      throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create faculty');
+      throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create faculty ');
     }
 
     user.faculty = newFaculty[0]._id;
@@ -109,10 +110,10 @@ const createFaculty = async (faculty: IFaculty, user: IUser) => {
     const newUser = await User.create([user], { session });
 
     if (!newUser.length) {
-      throw new ApiError(httpStatus.BAD_REQUEST, 'failed to create user');
+      throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create faculty');
     }
-
     newUserAllData = newUser[0];
+
     await session.commitTransaction();
     await session.endSession();
   } catch (error) {
@@ -133,8 +134,9 @@ const createFaculty = async (faculty: IFaculty, user: IUser) => {
         },
       ],
     });
-    return newUserAllData;
   }
+
+  return newUserAllData;
 };
 
 export const UserService = {
