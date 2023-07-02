@@ -1,0 +1,12 @@
+{
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-07-02T15:40:31.187Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-07-02T15:43:44.492Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}

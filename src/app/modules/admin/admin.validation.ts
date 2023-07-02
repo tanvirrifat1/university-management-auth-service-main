@@ -27,6 +27,7 @@ const updateAdmin = z.object({
     department: z.string().optional(),
 
     designation: z.string().optional(),
+
     profileImage: z.string().optional(),
   }),
 });
