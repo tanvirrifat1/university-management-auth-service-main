@@ -7,7 +7,6 @@ import { errorLogger } from '../../shared/logger';
 import { ZodError } from 'zod';
 import handleZodError from '../../Error/handleZodError';
 import handleCastError from '../../Error/handleCastError';
-// import { error } from 'winston'
 
 const globalErrorHandler: ErrorRequestHandler = (
   error,
