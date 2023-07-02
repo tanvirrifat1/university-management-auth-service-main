@@ -11,14 +11,15 @@ import handleCastError from '../../Error/handleCastError';
 const globalErrorHandler: ErrorRequestHandler = (
   error,
   req: Request,
-  res: Response
+  res: Response,
+  next: NextFunction
 ) => {
   config.env === 'development'
-    ? console.log('globalErrorHandler', error)
+    ? console.log(`🐱‍🏍 globalErrorHandler ~~`, { error })
     : errorLogger.error('globalErrorHandler', error);
 
   let statusCode = 500;
-  let message = 'Something went wrong';
+  let message = 'Something went wrong !';
   let errorMessages: IGenericErrorMessage[] = [];
 
   if (error?.name === 'ValidationError') {
@@ -38,7 +39,7 @@ const globalErrorHandler: ErrorRequestHandler = (
     errorMessages = simplifiedError.errorMessages;
   } else if (error instanceof ApiError) {
     statusCode = error?.statusCode;
-    message = error?.message;
+    message = error.message;
     errorMessages = error?.message
       ? [
           {
@@ -53,7 +54,7 @@ const globalErrorHandler: ErrorRequestHandler = (
       ? [
           {
             path: '',
-            message: error.message,
+            message: error?.message,
           },
         ]
       : [];
