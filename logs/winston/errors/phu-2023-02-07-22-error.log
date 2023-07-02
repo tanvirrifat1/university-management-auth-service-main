@@ -1,0 +1,18 @@
+{
+  message: 'Failed to connect database',
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-07-02T16:15:27.868Z'
+}
+{
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-07-02T16:49:25.571Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-07-02T16:50:07.210Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}

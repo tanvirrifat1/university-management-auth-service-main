@@ -65,7 +65,7 @@ const getAllAdmins = async (
 };
 
 const getSingleAdmin = async (id: string): Promise<IAdmin | null> => {
-  const result = await Admin.findOne({ id }).populate('ManagementDepartment');
+  const result = await Admin.findById(id).populate('ManagementDepartment');
   return result;
 };
 
@@ -73,7 +73,7 @@ const updateAdmin = async (
   id: string,
   payload: Partial<IAdmin>
 ): Promise<IAdmin | null> => {
-  const isExist = await Admin.findOne({ id });
+  const isExist = await Admin.findById(id);
 
   if (!isExist) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Admin not found !');
@@ -90,7 +90,7 @@ const updateAdmin = async (
     });
   }
 
-  const result = await Admin.findOneAndUpdate({ id }, updatedStudentData, {
+  const result = await Admin.findByIdAndUpdate(id, updatedStudentData, {
     new: true,
   });
   return result;
@@ -98,7 +98,7 @@ const updateAdmin = async (
 
 const deleteAdmin = async (id: string): Promise<IAdmin | null> => {
   // check if the faculty is exist
-  const isExist = await Admin.findOne({ id });
+  const isExist = await Admin.findById(id);
 
   if (!isExist) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Faculty not found !');
@@ -109,12 +109,12 @@ const deleteAdmin = async (id: string): Promise<IAdmin | null> => {
   try {
     session.startTransaction();
     //delete student first
-    const student = await Admin.findOneAndDelete({ id }, { session });
+    const student = await Admin.findByIdAndDelete(id, { session });
     if (!student) {
       throw new ApiError(404, 'Failed to delete student');
     }
     //delete user
-    await User.deleteOne({ id });
+    await User.findByIdAndDelete(id);
     session.commitTransaction();
     session.endSession();
 

@@ -9,21 +9,18 @@ const AdminSchema = new Schema<IAdmin, AdminModel>(
       unique: true,
     },
     name: {
-      type: {
-        firstName: {
-          type: String,
-          required: true,
-        },
-        lastName: {
-          type: String,
-          required: true,
-        },
-        middleName: {
-          type: String,
-          required: false,
-        },
+      firstName: {
+        type: String,
+        required: true,
       },
-      required: true,
+      lastName: {
+        type: String,
+        required: true,
+      },
+      middleName: {
+        type: String,
+        required: false,
+      },
     },
     dateOfBirth: {
       type: String,
@@ -61,7 +58,6 @@ const AdminSchema = new Schema<IAdmin, AdminModel>(
     managementDepartment: {
       type: Schema.Types.ObjectId,
       ref: 'ManagementDepartment',
-      required: true,
     },
     designation: {
       type: String,

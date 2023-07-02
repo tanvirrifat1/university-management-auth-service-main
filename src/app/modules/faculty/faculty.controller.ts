@@ -42,7 +42,7 @@ const getSingleFaculty = catchAsync(async (req: Request, res: Response) => {
 const updatedFaculties = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
   const updatedData = req.body;
-
+  console.log(updatedData);
   const result = await FacultyService.updateFaculty(id, updatedData);
 
   sendResponse<IFaculty>(res, {
