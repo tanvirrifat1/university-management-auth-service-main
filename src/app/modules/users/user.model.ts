@@ -49,7 +49,6 @@ userSchema.pre('save', async function (next) {
     Number(config.bycrypt_salt_rounds)
   );
   next();
-  console.log('djhfgdhk');
 });
 
 export const User = model<IUser, UserModel>('User', userSchema);

@@ -17,6 +17,8 @@ app.use('/api/v1/', routes);
 
 // globalErrorHandler
 app.use(globalErrorHandler);
+app.use(globalErrorHandler);
+app.use(globalErrorHandler);
 
 // Api handle not found
 app.use((req: Request, res: Response, next: NextFunction) => {
