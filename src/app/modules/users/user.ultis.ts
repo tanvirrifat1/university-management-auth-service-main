@@ -39,9 +39,10 @@ export const findLastFacultyId = async (): Promise<string | undefined> => {
     { id: 1, _id: 0 }
   )
     .sort({
-      cratedAt: -1,
+      createdAt: -1,
     })
     .lean();
+
   return lastFaculty?.id ? lastFaculty.id.substring(2) : undefined;
 };
 
@@ -52,6 +53,7 @@ export const generatedFacultyId = async (): Promise<string> => {
   let incrementedId = (parseInt(currentId) + 1).toString().padStart(5, '0');
 
   incrementedId = `F-${incrementedId}`;
+
   return incrementedId;
 };
 

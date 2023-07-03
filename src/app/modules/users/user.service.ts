@@ -25,12 +25,11 @@ const createStudent = async (
   if (!user.password) {
     user.password = config.default_student_pass as string;
   }
+
   user.role = 'student';
   const AcademicSemester = await academicSemester.findById(
     student.academicSemester
   );
-
-  console.log(AcademicSemester);
 
   let newUserAllData = null;
   const session = await mongoose.startSession();
@@ -87,7 +86,7 @@ const createFaculty = async (
   faculty: IFaculty,
   user: IUser
 ): Promise<IUser | null> => {
-  // default password
+  // If password is not given,set default password
   if (!user.password) {
     user.password = config.default_faculty_pass as string;
   }
@@ -95,22 +94,23 @@ const createFaculty = async (
   // set role
   user.role = 'faculty';
 
-  // generate faculty id
   let newUserAllData = null;
   const session = await mongoose.startSession();
   try {
     session.startTransaction();
-
+    // generate faculty id
     const id = await generatedFacultyId();
+
+    // set custom id into both  faculty & user
     user.id = id;
     faculty.id = id;
-
+    // Create faculty using sesssin
     const newFaculty = await Faculty.create([faculty], { session });
 
     if (!newFaculty.length) {
       throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create faculty ');
     }
-
+    // set faculty _id (reference) into user.student
     user.faculty = newFaculty[0]._id;
 
     const newUser = await User.create([user], { session });
