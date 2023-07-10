@@ -3,7 +3,7 @@ import { IUser, UserModel } from './user.interface';
 import bcrypt from 'bcrypt';
 import config from '../../../config';
 
-const userSchema = new Schema<IUser>(
+const userSchema = new Schema<IUser, UserModel>(
   {
     id: {
       type: String,
@@ -44,22 +44,28 @@ const userSchema = new Schema<IUser>(
   }
 );
 
-userSchema.methods.isPasswordMatched = async function (
+// userSchema.methods.isPasswordMatched = async function (
+//   givenPassword: string,
+//   savedPassword: string
+// ): Promise<boolean> {
+//   const result = await bcrypt.compare(givenPassword, savedPassword);
+//   return result;
+// };
+
+userSchema.statics.isUserExist = async function (
+  id: string
+): Promise<IUser | null> {
+  return await User.findOne(
+    { id },
+    { id: 1, password: 1, role: 1, needsPasswordChange: 1 }
+  );
+};
+
+userSchema.statics.isPasswordMatched = async function (
   givenPassword: string,
   savedPassword: string
 ): Promise<boolean> {
-  const result = await bcrypt.compare(givenPassword, savedPassword);
-  return result;
-};
-
-userSchema.methods.isUserExist = async function (
-  id: string
-): Promise<Partial<IUser | null>> {
-  const user = await User.findOne(
-    { id },
-    { id: 1, password: 1, needsPasswordChange: 1 }
-  );
-  return user;
+  return await bcrypt.compare(givenPassword, savedPassword);
 };
 
 userSchema.pre('save', async function (next) {
