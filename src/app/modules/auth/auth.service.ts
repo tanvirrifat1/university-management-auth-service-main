@@ -1,11 +1,12 @@
 import httpStatus from 'http-status';
 import ApiError from '../../../Error/ApiError';
 import { User } from '../users/user.model';
-import { ILoginUser } from './auth.interface';
+import { ILoginUser, ILoginUserResponse } from './auth.interface';
 import jwt, { Secret } from 'jsonwebtoken';
 import config from '../../../config';
+import { jwtHelpers } from '../../../helpers/jwtHelpers';
 
-const loginUser = async (payload: ILoginUser) => {
+const loginUser = async (payload: ILoginUser): Promise<ILoginUserResponse> => {
   const { id, password } = payload;
 
   const isUserExist = await User.isUserExist(id);
@@ -22,17 +23,24 @@ const loginUser = async (payload: ILoginUser) => {
   }
 
   //   create access token & refresh token
-
-  const accessToken = jwt.sign(
-    {
-      id: isUserExist?.id,
-      role: isUserExist.role,
-    },
+  const { id: userId, role, needsPasswordChange } = isUserExist;
+  const accessToken = jwtHelpers.createToken(
+    { userId, role },
     config.jwt.secret as Secret,
-    { expiresIn: config.jwt.refresh_expires_in }
+    config.jwt.expires_in as string
   );
 
-  return {};
+  const refreshToken = jwtHelpers.createToken(
+    { userId, role },
+    config.jwt.refresh_secret as Secret,
+    config.jwt.refresh_expires_in as string
+  );
+
+  return {
+    accessToken,
+    refreshToken,
+    needsPasswordChange,
+  };
 };
 
 export const AuthService = {
