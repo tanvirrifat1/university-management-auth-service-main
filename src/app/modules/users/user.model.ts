@@ -17,6 +17,11 @@ const userSchema = new Schema<IUser>(
     password: {
       type: String,
       required: true,
+      select: 0,
+    },
+    needsPasswordChange: {
+      type: Boolean,
+      default: true,
     },
     student: {
       type: Schema.Types.ObjectId,
@@ -39,11 +44,27 @@ const userSchema = new Schema<IUser>(
   }
 );
 
+userSchema.methods.isPasswordMatched = async function (
+  givenPassword: string,
+  savedPassword: string
+): Promise<boolean> {
+  const result = await bcrypt.compare(givenPassword, savedPassword);
+  return result;
+};
+
+userSchema.methods.isUserExist = async function (
+  id: string
+): Promise<Partial<IUser | null>> {
+  const user = await User.findOne(
+    { id },
+    { id: 1, password: 1, needsPasswordChange: 1 }
+  );
+  return user;
+};
+
 userSchema.pre('save', async function (next) {
   // hashing user password
-
   const user = this;
-
   user.password = await bcrypt.hash(
     user.password,
     Number(config.bycrypt_salt_rounds)
