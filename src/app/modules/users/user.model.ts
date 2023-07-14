@@ -23,6 +23,9 @@ const userSchema = new Schema<IUser, UserModel>(
       type: Boolean,
       default: true,
     },
+    passwordChangedAt: {
+      type: Date,
+    },
     student: {
       type: Schema.Types.ObjectId,
       ref: 'Student',
@@ -43,14 +46,6 @@ const userSchema = new Schema<IUser, UserModel>(
     },
   }
 );
-
-// userSchema.methods.isPasswordMatched = async function (
-//   givenPassword: string,
-//   savedPassword: string
-// ): Promise<boolean> {
-//   const result = await bcrypt.compare(givenPassword, savedPassword);
-//   return result;
-// };
 
 userSchema.statics.isUserExist = async function (
   id: string
