@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import ApiError from '../../../Error/ApiError';
 import config from '../../../config/index';
-import { academicSemester } from '../academicSemester/academicSemester.model';
+
 import { IStudent } from '../student/student.interface';
 import { IUser } from './user.interface';
 import { User } from './user.model';
@@ -16,6 +16,7 @@ import { IFaculty } from '../faculty/faculty.interface';
 import { Faculty } from '../faculty/faculty.model';
 import { IAdmin } from '../admin/admin.interface';
 import { Admin } from '../admin/admin.model';
+import { academicSemester } from '../academicSemester/academicSemester.model';
 
 const createStudent = async (
   student: IStudent,
@@ -149,20 +150,18 @@ const createAdmin = async (
   admin: IAdmin,
   user: IUser
 ): Promise<IUser | null> => {
-  // default password
+  // If password is not given,set default password
   if (!user.password) {
     user.password = config.default_admin_pass as string;
   }
-
   // set role
   user.role = 'admin';
 
-  // generate faculty id
   let newUserAllData = null;
   const session = await mongoose.startSession();
   try {
     session.startTransaction();
-
+    // generate admin id
     const id = await generateAdminId();
     user.id = id;
     admin.id = id;

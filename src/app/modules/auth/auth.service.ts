@@ -90,33 +90,46 @@ const changePassword = async (
 ): Promise<void> => {
   const { oldPassword, newPassword } = payload;
 
-  const isUserExist = await User.isUserExist(user?.userId);
+  // // checking is user exist
+  // const isUserExist = await User.isUserExist(user?.userId);
+
+  //alternative way
+  const isUserExist = await User.findOne({ id: user?.userId }).select(
+    '+password'
+  );
 
   if (!isUserExist) {
     throw new ApiError(httpStatus.NOT_FOUND, 'User does not exist');
   }
 
+  // checking old password
   if (
     isUserExist.password &&
     !(await User.isPasswordMatched(oldPassword, isUserExist.password))
   ) {
-    throw new ApiError(httpStatus.UNAUTHORIZED, 'old Password is incorrect');
+    throw new ApiError(httpStatus.UNAUTHORIZED, 'Old Password is incorrect');
   }
 
-  const newHashedPassword = await bcrypt.hash(
-    newPassword,
-    Number(config.bycrypt_salt_rounds as string)
-  );
+  // // hash password before saving
+  // const newHashedPassword = await bcrypt.hash(
+  //   newPassword,
+  //   Number(config.bycrypt_salt_rounds)
+  // );
 
-  const query = { id: user?.userId };
+  // const query = { id: user?.userId };
+  // const updatedData = {
+  //   password: newHashedPassword,  //
+  //   needsPasswordChange: false,
+  //   passwordChangedAt: new Date(), //
+  // };
 
-  const updatesData = {
-    password: newHashedPassword,
-    needsPasswordChange: false,
-    passwordChangedAt: new Date(),
-  };
+  // await User.findOneAndUpdate(query, updatedData);
+  // data update
+  isUserExist.password = newPassword;
+  isUserExist.needsPasswordChange = false;
 
-  await User.findOneAndUpdate(query, updatesData);
+  // updating using save()
+  isUserExist.save();
 };
 
 export const AuthService = {
