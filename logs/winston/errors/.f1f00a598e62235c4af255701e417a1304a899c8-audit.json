@@ -1,0 +1,40 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\errors\\.f1f00a598e62235c4af255701e417a1304a899c8-audit.json",
+    "files": [
+        {
+            "date": 1693407003383,
+            "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\errors\\phu-2023-30-08-20-error.log",
+            "hash": "2da346b8bb3c402392c5f16230b5bce8829a5b0b416a3ac5345c613386ec6c2d"
+        },
+        {
+            "date": 1693500113709,
+            "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\errors\\phu-2023-31-08-22-error.log",
+            "hash": "358bf19187272794e62d3582246451d8f285535eaa22013a89f75a30cae223bd"
+        },
+        {
+            "date": 1694234307268,
+            "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\errors\\phu-2023-09-09-10-error.log",
+            "hash": "065599f83e4b7c4e1104638c745853f2575a2499e94bcb00bb93434f4659abc4"
+        },
+        {
+            "date": 1694235737738,
+            "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\errors\\phu-2023-09-09-11-error.log",
+            "hash": "cde5726cc2d86e39b200e2766dafeed33e7f38245225f403a958d38993421816"
+        },
+        {
+            "date": 1694502982506,
+            "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\errors\\phu-2023-12-09-13-error.log",
+            "hash": "06bd080fd07128fc515717cb257564219eb0912347d6c32a1d811a27d88fc788"
+        },
+        {
+            "date": 1694590153338,
+            "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\errors\\phu-2023-13-09-13-error.log",
+            "hash": "4b7bb430a683cdf2b26928aa7f056839acc4b0a18757fadb4a8b2b0b38a73b1f"
+        }
+    ],
+    "hashType": "sha256"
+}
