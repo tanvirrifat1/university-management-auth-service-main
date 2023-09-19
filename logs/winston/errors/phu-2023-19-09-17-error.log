@@ -1,0 +1,40 @@
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Summer' },
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-09-19T11:34:37.692Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Summer' },
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-09-19T11:38:29.311Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Autumn' },
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-09-19T11:41:34.700Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Summer' },
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-09-19T11:53:35.928Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}

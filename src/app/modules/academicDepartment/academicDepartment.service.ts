@@ -1,5 +1,6 @@
 import { SortOrder } from 'mongoose';
 import {
+  AcademicDepartmentCreatedEvent,
   IAcademicDepartment,
   IAcademicDepartmentFilters,
 } from './academicDepartment.interface';
@@ -8,6 +9,7 @@ import { academicDepartmentSearchableFields } from './academicDepartment.constan
 import { paginationHelpers } from '../../../helpers/paginationHelpers';
 import { IGenericResponse } from '../../../interface/common';
 import { IPaginationOptions } from '../../../interface/pagination';
+import { AcademicFaculty } from '../academicFaculty/academicFaculty.model';
 
 const createDepartment = async (
   payload: IAcademicDepartment
@@ -102,10 +104,25 @@ const deleteDepartment = async (
   return result;
 };
 
+const insertIntoFromEvent = async (
+  e: AcademicDepartmentCreatedEvent
+): Promise<void> => {
+  const academicFaculty = await AcademicFaculty.findOne({
+    syncId: e.academicFacultyId,
+  });
+  const payload = {
+    title: e.title,
+    academicFaculty: academicFaculty?._id,
+    syncId: e.id,
+  };
+  await AcademicDepartment.create(payload);
+};
+
 export const AcademicDepartmentService = {
   createDepartment,
   getAllDepartments,
   deleteDepartment,
   getSingleDepartment,
   updatedDepartment,
+  insertIntoFromEvent,
 };

@@ -1,40 +1,40 @@
 {
-    "keep": {
-        "days": true,
-        "amount": 14
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\successes\\.c811fb80cce5db12925549a05b8bf5b11e06590a-audit.json",
+  "files": [
+    {
+      "date": 1693407003375,
+      "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-30-08-20-success.log",
+      "hash": "8d800a0a499886d9a65a266fcab29cc258a7610cb2449310831046cf3aa2c4f4"
     },
-    "auditLog": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\successes\\.c811fb80cce5db12925549a05b8bf5b11e06590a-audit.json",
-    "files": [
-        {
-            "date": 1693407003375,
-            "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-30-08-20-success.log",
-            "hash": "8d800a0a499886d9a65a266fcab29cc258a7610cb2449310831046cf3aa2c4f4"
-        },
-        {
-            "date": 1693500113701,
-            "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-31-08-22-success.log",
-            "hash": "b9af794c0fcb9407b7ae3f1253869b2daff13836169035c6f7c29abc93e50fde"
-        },
-        {
-            "date": 1694234307258,
-            "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-09-09-10-success.log",
-            "hash": "6ee9a5ab433f989d666e526177c42dd28717d4e08ae3d95aa15526ead8cd527d"
-        },
-        {
-            "date": 1694235737734,
-            "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-09-09-11-success.log",
-            "hash": "f5dd44389c398c69f9cf8b076b199f5ba2264d02afcf01a048801c9ff4733073"
-        },
-        {
-            "date": 1694502982497,
-            "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-12-09-13-success.log",
-            "hash": "aaa99c91f33e03fc44270db35e43b8da5cbb0e3307eefac0960c621a51bc87e1"
-        },
-        {
-            "date": 1694590153329,
-            "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-13-09-13-success.log",
-            "hash": "fdf0fd228f5c12e79a5df705d2a3010250068c7f6b551f993c117dbc0aca63e5"
-        }
-    ],
-    "hashType": "sha256"
+    {
+      "date": 1693500113701,
+      "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-31-08-22-success.log",
+      "hash": "b9af794c0fcb9407b7ae3f1253869b2daff13836169035c6f7c29abc93e50fde"
+    },
+    {
+      "date": 1694234307258,
+      "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-09-09-10-success.log",
+      "hash": "6ee9a5ab433f989d666e526177c42dd28717d4e08ae3d95aa15526ead8cd527d"
+    },
+    {
+      "date": 1694235737734,
+      "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-09-09-11-success.log",
+      "hash": "f5dd44389c398c69f9cf8b076b199f5ba2264d02afcf01a048801c9ff4733073"
+    },
+    {
+      "date": 1694502982497,
+      "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-12-09-13-success.log",
+      "hash": "aaa99c91f33e03fc44270db35e43b8da5cbb0e3307eefac0960c621a51bc87e1"
+    },
+    {
+      "date": 1694590153329,
+      "name": "D:\\apollo-next-level-web-development\\milestone3-4\\university-management-auth-service-main\\logs\\winston\\successes\\phu-2023-13-09-13-success.log",
+      "hash": "fdf0fd228f5c12e79a5df705d2a3010250068c7f6b551f993c117dbc0aca63e5"
+    }
+  ],
+  "hashType": "sha256"
 }

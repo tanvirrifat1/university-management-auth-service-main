@@ -1,0 +1,327 @@
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Summer' },
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-09-19T13:32:49.734Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Fall' },
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-09-19T13:35:09.334Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Autumn' },
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-09-19T13:35:55.363Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  errors: {
+    title: ValidatorError: `Pithron Developer` is not a valid enum value for path `title`.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaString.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: '`Pithron Developer` is not a valid enum value for path `title`.',
+        type: 'enum',
+        enumValues: [ 'Autumn', 'Summer', 'Fall' ],
+        path: 'title',
+        value: 'Pithron Developer'
+      },
+      kind: 'enum',
+      path: 'title',
+      value: 'Pithron Developer',
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    year: ValidatorError: Path `year` is required.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaNumber.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `year` is required.',
+        type: 'required',
+        path: 'year',
+        value: undefined
+      },
+      kind: 'required',
+      path: 'year',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    code: ValidatorError: Path `code` is required.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaString.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `code` is required.',
+        type: 'required',
+        path: 'code',
+        value: undefined
+      },
+      kind: 'required',
+      path: 'code',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    startMonth: ValidatorError: Path `startMonth` is required.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaString.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `startMonth` is required.',
+        type: 'required',
+        path: 'startMonth',
+        value: undefined
+      },
+      kind: 'required',
+      path: 'startMonth',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    endMonth: ValidatorError: Path `endMonth` is required.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaString.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `endMonth` is required.',
+        type: 'required',
+        path: 'endMonth',
+        value: undefined
+      },
+      kind: 'required',
+      path: 'endMonth',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'AcademicSemester validation failed',
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-09-19T13:39:28.269Z'
+}
+{
+  errors: {
+    title: ValidatorError: `JS Developer` is not a valid enum value for path `title`.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaString.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: '`JS Developer` is not a valid enum value for path `title`.',
+        type: 'enum',
+        enumValues: [ 'Autumn', 'Summer', 'Fall' ],
+        path: 'title',
+        value: 'JS Developer'
+      },
+      kind: 'enum',
+      path: 'title',
+      value: 'JS Developer',
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    year: ValidatorError: Path `year` is required.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaNumber.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `year` is required.',
+        type: 'required',
+        path: 'year',
+        value: undefined
+      },
+      kind: 'required',
+      path: 'year',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    code: ValidatorError: Path `code` is required.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaString.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `code` is required.',
+        type: 'required',
+        path: 'code',
+        value: undefined
+      },
+      kind: 'required',
+      path: 'code',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    startMonth: ValidatorError: Path `startMonth` is required.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaString.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `startMonth` is required.',
+        type: 'required',
+        path: 'startMonth',
+        value: undefined
+      },
+      kind: 'required',
+      path: 'startMonth',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    endMonth: ValidatorError: Path `endMonth` is required.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaString.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `endMonth` is required.',
+        type: 'required',
+        path: 'endMonth',
+        value: undefined
+      },
+      kind: 'required',
+      path: 'endMonth',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'AcademicSemester validation failed',
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-09-19T13:41:12.948Z'
+}
+{
+  errors: {
+    title: ValidatorError: `TS Developer` is not a valid enum value for path `title`.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaString.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: '`TS Developer` is not a valid enum value for path `title`.',
+        type: 'enum',
+        enumValues: [ 'Autumn', 'Summer', 'Fall' ],
+        path: 'title',
+        value: 'TS Developer'
+      },
+      kind: 'enum',
+      path: 'title',
+      value: 'TS Developer',
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    year: ValidatorError: Path `year` is required.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaNumber.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `year` is required.',
+        type: 'required',
+        path: 'year',
+        value: undefined
+      },
+      kind: 'required',
+      path: 'year',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    code: ValidatorError: Path `code` is required.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaString.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `code` is required.',
+        type: 'required',
+        path: 'code',
+        value: undefined
+      },
+      kind: 'required',
+      path: 'code',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    startMonth: ValidatorError: Path `startMonth` is required.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaString.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `startMonth` is required.',
+        type: 'required',
+        path: 'startMonth',
+        value: undefined
+      },
+      kind: 'required',
+      path: 'startMonth',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    endMonth: ValidatorError: Path `endMonth` is required.
+        at validate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1349:13)
+        at SchemaString.SchemaType.doValidate (C:\projects\UM-auth-service\node_modules\mongoose\lib\schematype.js:1333:7)
+        at C:\projects\UM-auth-service\node_modules\mongoose\lib\document.js:2932:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `endMonth` is required.',
+        type: 'required',
+        path: 'endMonth',
+        value: undefined
+      },
+      kind: 'required',
+      path: 'endMonth',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'AcademicSemester validation failed',
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-09-19T13:41:55.501Z'
+}

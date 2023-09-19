@@ -1,0 +1,20 @@
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Autumn' },
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-09-19T12:02:40.146Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Fall' },
+  level: 'error',
+  label: 'PH',
+  timestamp: '2023-09-19T12:04:49.745Z',
+  [Symbol(errorLabels)]: Set(0) {}
+}
