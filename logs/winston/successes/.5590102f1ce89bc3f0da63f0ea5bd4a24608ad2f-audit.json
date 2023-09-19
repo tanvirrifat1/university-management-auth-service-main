@@ -9,6 +9,31 @@
             "date": 1694786783150,
             "name": "C:\\projects\\UM-auth-service\\logs\\winston\\successes\\phu-2023-15-09-20-success.log",
             "hash": "99f5ff25f8d2a1b4029b34e2486511cff082bd696bd2318497cb22797bd00d69"
+        },
+        {
+            "date": 1694792262772,
+            "name": "C:\\projects\\UM-auth-service\\logs\\winston\\successes\\phu-2023-15-09-21-success.log",
+            "hash": "ff9bc0301656d25f6169f93a8df27db349337a5827ebc281cd1a01aba0145d69"
+        },
+        {
+            "date": 1694794740512,
+            "name": "C:\\projects\\UM-auth-service\\logs\\winston\\successes\\phu-2023-15-09-22-success.log",
+            "hash": "52f036374e50dedbcc674ac9bad7888f264d0f1958b291a8258e8a7f22d164da"
+        },
+        {
+            "date": 1695093577745,
+            "name": "C:\\projects\\UM-auth-service\\logs\\winston\\successes\\phu-2023-19-09-09-success.log",
+            "hash": "da2e247737a82a6c280f4162ef17fff82bdb33ec69f6646defb1acfbdfdd8105"
+        },
+        {
+            "date": 1695096447234,
+            "name": "C:\\projects\\UM-auth-service\\logs\\winston\\successes\\phu-2023-19-09-10-success.log",
+            "hash": "123d0009fb110dee89b8e50668672785ae215360bc19218a340f5d414dd356b7"
+        },
+        {
+            "date": 1695100523103,
+            "name": "C:\\projects\\UM-auth-service\\logs\\winston\\successes\\phu-2023-19-09-11-success.log",
+            "hash": "f6861abbd4936b03b21e565614141225b6766081bf504b7856c485d9c8a8f8b3"
         }
     ],
     "hashType": "sha256"

@@ -1,0 +1,24 @@
+{
+  message: 'Database connect successfully',
+  level: 'info',
+  label: 'PH',
+  timestamp: '2023-09-19T03:19:48.933Z'
+}
+{
+  message: 'Application app listening on port 5001',
+  level: 'info',
+  label: 'PH',
+  timestamp: '2023-09-19T03:19:48.940Z'
+}
+{
+  message: 'Database connect successfully',
+  level: 'info',
+  label: 'PH',
+  timestamp: '2023-09-19T03:54:49.447Z'
+}
+{
+  message: 'Application app listening on port 5001',
+  level: 'info',
+  label: 'PH',
+  timestamp: '2023-09-19T03:54:49.456Z'
+}
