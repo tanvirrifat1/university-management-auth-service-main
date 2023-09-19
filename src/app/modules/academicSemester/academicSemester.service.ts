@@ -128,6 +128,26 @@ const createSemesterFromEvent = async (
   });
 };
 
+const updatedFromEvent = async (
+  e: IAcademicSemesterCreatedEvent
+): Promise<void> => {
+  await academicSemester.findOneAndUpdate(
+    { syncId: e.id },
+    {
+      $set: {
+        title: e.title,
+        year: e.year,
+        code: e.code,
+        startMonth: e.startMonth,
+        endMonth: e.endMonth,
+      },
+    }
+  );
+};
+
+const deleteOneFromDBFromEvent = async (syncId: string): Promise<void> => {
+  await academicSemester.findOneAndDelete({ syncId });
+};
 export const AcademicSemesterService = {
   createSemester,
   getAllSemesters,
@@ -135,4 +155,6 @@ export const AcademicSemesterService = {
   UpdateSemester,
   deleteSemester,
   createSemesterFromEvent,
+  updatedFromEvent,
+  deleteOneFromDBFromEvent,
 };

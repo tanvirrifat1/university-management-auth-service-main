@@ -105,6 +105,24 @@ const insertIntoDBFromEvent = async (
   });
 };
 
+const updateDBFromEvent = async (
+  e: AcademicFacultyCreatedEvent
+): Promise<void> => {
+  await AcademicFaculty.findOneAndUpdate(
+    { syncId: e.id },
+
+    {
+      $set: {
+        title: e.title,
+      },
+    }
+  );
+};
+
+const deleteDBFromEvent = async (syncId: string): Promise<void> => {
+  await AcademicFaculty.findOneAndDelete({ syncId });
+};
+
 export const AcademicFacultyService = {
   createFaculty,
   getAllFaculties,
@@ -112,4 +130,6 @@ export const AcademicFacultyService = {
   deleteByIdFromDB,
   insertIntoDBFromEvent,
   updatedFaculty,
+  updateDBFromEvent,
+  deleteDBFromEvent,
 };
