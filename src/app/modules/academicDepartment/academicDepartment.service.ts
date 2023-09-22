@@ -1,6 +1,7 @@
 import { SortOrder } from 'mongoose';
 import {
   AcademicDepartmentCreatedEvent,
+  AcademicDepartmentUpdatedEvent,
   IAcademicDepartment,
   IAcademicDepartmentFilters,
 } from './academicDepartment.interface';
@@ -118,10 +119,35 @@ const insertIntoFromEvent = async (
   await AcademicDepartment.create(payload);
 };
 
+const updateOneInDBFromEvent = async (
+  e: AcademicDepartmentUpdatedEvent
+): Promise<void> => {
+  const academicFaculty = await AcademicFaculty.findOne({
+    syncId: e.academicFacultyId,
+  });
+  const payload = {
+    title: e.title,
+    academicFaculty: academicFaculty?._id,
+  };
+
+  await AcademicDepartment.findOneAndUpdate(
+    { syncId: e.id },
+    {
+      $set: payload,
+    }
+  );
+};
+
+const deleteOneFromDBFromEvent = async (syncId: string): Promise<void> => {
+  await AcademicDepartment.findOneAndDelete({ syncId });
+};
+
 export const AcademicDepartmentService = {
   createDepartment,
   getAllDepartments,
   deleteDepartment,
+  deleteOneFromDBFromEvent,
+  updateOneInDBFromEvent,
   getSingleDepartment,
   updatedDepartment,
   insertIntoFromEvent,
