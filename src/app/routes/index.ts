@@ -37,7 +37,7 @@ const modulesRoutes = [
     route: StudentRoutes,
   },
   {
-    path: '/faculties',
+    path: '/faculty',
     route: FacultyRoutes,
   },
   {
