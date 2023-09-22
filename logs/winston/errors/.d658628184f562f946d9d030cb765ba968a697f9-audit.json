@@ -74,6 +74,46 @@
             "date": 1695142910878,
             "name": "C:\\projects\\UM-auth-service\\logs\\winston\\errors\\phu-2023-19-09-23-error.log",
             "hash": "bb8796ac5dbfdacb4ce8bbd2cb6edb2e22ed6d32e50091f3003c0294aebea214"
+        },
+        {
+            "date": 1695183732087,
+            "name": "C:\\projects\\UM-auth-service\\logs\\winston\\errors\\phu-2023-20-09-10-error.log",
+            "hash": "e637ac8b63a15cebd9fb1ec0af6b3888906c542ee39a588439428918f6e38572"
+        },
+        {
+            "date": 1695189924574,
+            "name": "C:\\projects\\UM-auth-service\\logs\\winston\\errors\\phu-2023-20-09-12-error.log",
+            "hash": "35b84fb27129968421f40800bd3bde54bacc6f4682f8018885ff333ea684557c"
+        },
+        {
+            "date": 1695273453639,
+            "name": "C:\\projects\\UM-auth-service\\logs\\winston\\errors\\phu-2023-21-09-11-error.log",
+            "hash": "29e8f5bb7cab6b04426afa19b00cad5e361f06e62821ec5b3a86e612ecd3c60d"
+        },
+        {
+            "date": 1695290873233,
+            "name": "C:\\projects\\UM-auth-service\\logs\\winston\\errors\\phu-2023-21-09-16-error.log",
+            "hash": "54d1c99d1cbc805305f1682357df54fcd42ce7330a63087418f2327de47bfb3a"
+        },
+        {
+            "date": 1695294055823,
+            "name": "C:\\projects\\UM-auth-service\\logs\\winston\\errors\\phu-2023-21-09-17-error.log",
+            "hash": "2b977a838d9506e68e9f025c942026f3d16ce18287e151bea3325364385baf35"
+        },
+        {
+            "date": 1695308743035,
+            "name": "C:\\projects\\UM-auth-service\\logs\\winston\\errors\\phu-2023-21-09-21-error.log",
+            "hash": "d68994a72298e3d30609e347dc8640ba587a88f9e5a34a509ce71b83f6d1fcbd"
+        },
+        {
+            "date": 1695312731547,
+            "name": "C:\\projects\\UM-auth-service\\logs\\winston\\errors\\phu-2023-21-09-22-error.log",
+            "hash": "b8ecd612ebe53d28d3abd69b1fc6c3037fca16f66e0998b995e0277a6b5b5a03"
+        },
+        {
+            "date": 1695315613573,
+            "name": "C:\\projects\\UM-auth-service\\logs\\winston\\errors\\phu-2023-21-09-23-error.log",
+            "hash": "2355dfb0de7023acac25fef9b47a2e4b2ab20d0ae3de63b80807e197aa992b26"
         }
     ],
     "hashType": "sha256"

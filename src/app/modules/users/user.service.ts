@@ -17,6 +17,7 @@ import { Faculty } from '../faculty/faculty.model';
 import { IAdmin } from '../admin/admin.interface';
 import { Admin } from '../admin/admin.model';
 import { academicSemester } from '../academicSemester/academicSemester.model';
+import { IAcademicSemester } from '../academicSemester/academicSemester.interface';
 
 const createStudent = async (
   student: IStudent,
@@ -36,24 +37,27 @@ const createStudent = async (
   const session = await mongoose.startSession();
   try {
     session.startTransaction();
-    const id = await generateStudentId(AcademicSemester);
+    const id = await generateStudentId(AcademicSemester as IAcademicSemester);
 
     user.id = id;
     student.id = id;
 
+    // Create student using sesssin
     const newStudent = await Student.create([student], { session });
-    if (!newStudent.length) {
-      throw new ApiError(httpStatus.BAD_REQUEST, 'failed to create student');
-    }
-    // set user
+    // const newStudent = await Student.create(student);
 
+    if (!newStudent.length) {
+      throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create student');
+    }
+
+    // set student _id (reference) into user.student
     user.student = newStudent[0]._id;
 
     const newUser = await User.create([user], { session });
-    if (!newUser.length) {
-      throw new ApiError(httpStatus.BAD_REQUEST, 'failed to create user');
-    }
 
+    if (!newUser.length) {
+      throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create user');
+    }
     newUserAllData = newUser[0];
 
     await session.commitTransaction();
